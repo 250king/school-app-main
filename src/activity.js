@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, SafeAreaView} from 'react-native';
-import {Title, Card, Button} from 'react-native-paper';
+import {Title, Card, Button, TextInput} from 'react-native-paper';
 
 const css = StyleSheet.create({
   base: {
@@ -11,6 +11,11 @@ const css = StyleSheet.create({
 const Activity = () => {
   return (
     <SafeAreaView style={css.base}>
+      <TextInput
+        label="搜索"
+        value={""}
+        onChangeText={(text) => setText(text)}
+      />
       <Card>
         <Card.Cover source={require('../resource/image/valentinepark.jpg')} />
         <Card.Content>
